@@ -62,7 +62,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DashBoard()
+            MyUi()
         }
 
     }
@@ -170,7 +170,7 @@ class MainActivity : ComponentActivity() {
                             ), contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.baseline_message_24),
+                            painter = painterResource(id = R.drawable.coffee_white),
                             contentDescription = null
                         )
                     }
@@ -184,7 +184,7 @@ class MainActivity : ComponentActivity() {
                             ), contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "message",
+                            text = "Tea-Coffie",
                             fontWeight = FontWeight.Bold,
                             color = Color(android.graphics.Color.parseColor("#7868e5"))
                         )
@@ -211,7 +211,7 @@ class MainActivity : ComponentActivity() {
                             ), contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.baseline_bug_report_24),
+                            painter = painterResource(id = R.drawable.smoking_rooms_24),
                             contentDescription = null
                         )
                     }
@@ -225,7 +225,7 @@ class MainActivity : ComponentActivity() {
                             ), contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "Report",
+                            text = "Smoking Zone",
                             fontWeight = FontWeight.Bold,
                             color = Color(android.graphics.Color.parseColor("#7868e5"))
                         )
@@ -258,7 +258,7 @@ class MainActivity : ComponentActivity() {
                             ), contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.baseline_inbox_24),
+                            painter = painterResource(id = R.drawable.restaurant_menu_24),
                             contentDescription = null
                         )
                     }
@@ -272,7 +272,7 @@ class MainActivity : ComponentActivity() {
                             ), contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "Inbox",
+                            text = "Breakfast",
                             fontWeight = FontWeight.Bold,
                             color = Color(android.graphics.Color.parseColor("#7868e5"))
                         )
@@ -299,7 +299,7 @@ class MainActivity : ComponentActivity() {
                             ), contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.baseline_library_books_24),
+                            painter = painterResource(id = R.drawable.pasta_24),
                             contentDescription = null
                         )
                     }
@@ -313,7 +313,7 @@ class MainActivity : ComponentActivity() {
                             ), contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "Library",
+                            text = "Snack",
                             fontWeight = FontWeight.Bold,
                             color = Color(android.graphics.Color.parseColor("#7868e5"))
                         )
@@ -337,12 +337,12 @@ class MainActivity : ComponentActivity() {
             ) {
                 val (img, text1, text2) = createRefs()
                 Image(
-                    painter = painterResource(id = R.drawable.circle),
+                    painter = painterResource(id = R.drawable.blue_arc_light),
                     contentDescription = null,
                     modifier = Modifier.constrainAs(img) {
                         top.linkTo(parent.top)
                         start.linkTo(parent.start)
-                    }
+                    }.width(100.dp)
                 )
                 Text(text = "To Get Unlimted", fontSize = 20.sp, fontWeight = FontWeight.Bold,
                     color = Color.White,
